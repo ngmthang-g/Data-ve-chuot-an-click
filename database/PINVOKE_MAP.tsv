@@ -1,0 +1,38 @@
+dll	api	managed_usage
+user32.dll	DestroyIcon	ModernAutoClicker.AppLogo::DestroyIcon
+user32.dll	RegisterHotKey	NativeMethods::RegisterHotKey
+user32.dll	UnregisterHotKey	NativeMethods::UnregisterHotKey
+user32.dll	SetWindowPos	NativeMethods::SetWindowPos
+user32.dll	SetCursorPos	NativeMethods::SetCursorPos
+user32.dll	keybd_event	NativeMethods::keybd_event
+user32.dll	MapVirtualKey	NativeMethods::MapVirtualKey
+user32.dll	SendMessage	NativeMethods::SendMessage
+user32.dll	ReleaseCapture	NativeMethods::ReleaseCapture
+user32.dll	GetWindowDC	NativeMethods::GetWindowDC
+user32.dll	SendInput	NativeMethods::SendInput
+user32.dll	GetCursorPos	NativeMethods::GetCursorPos
+user32.dll	SetForegroundWindow	NativeMethods::SetForegroundWindow
+user32.dll	GetForegroundWindow	NativeMethods::GetForegroundWindow
+user32.dll	ShowWindow	NativeMethods::ShowWindow
+user32.dll	GetWindowThreadProcessId	NativeMethods::GetWindowThreadProcessId
+user32.dll	GetWindowLong/GetWindowLongPtr	window-style helpers
+user32.dll	SetWindowLong/SetWindowLongPtr	window-style helpers
+user32.dll	GetDC/ReleaseDC	pixel helpers
+gdi32.dll	GetPixel	NativeMethods::GetPixel
+user32.dll	GetAncestor	NativeMethods::GetAncestor
+user32.dll	WindowFromPoint	NativeMethods::WindowFromPoint
+user32.dll	RealChildWindowFromPoint	NativeMethods::RealChildWindowFromPoint
+user32.dll	ScreenToClient	NativeMethods::ScreenToClient
+user32.dll	ClientToScreen	NativeMethods::ClientToScreen
+user32.dll	PostMessage	NativeMethods::PostMessage
+user32.dll	GetWindowText/GetWindowTextLength	window enumeration/targeting
+user32.dll	GetClassName	window enumeration
+user32.dll	IsWindow/IsWindowVisible/IsIconic	target cache validation
+user32.dll	GetClientRect/GetWindowRect	coordinate/window geometry
+user32.dll	EnumWindows	target discovery
+user32.dll	GetClassLong/GetClassLongPtr	icon lookup
+user32.dll	GetWindow	owner filtering
+dwmapi.dll	DwmGetWindowAttribute	cloaked-window filtering
+shcore.dll	SetProcessDpiAwareness	Program DPI awareness
+user32.dll	SetProcessDPIAware	Program DPI fallback
+user32.dll	FindWindow	single-instance activation

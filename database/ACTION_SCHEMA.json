@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/mouse-hidden-click/macro-profile.schema.json",
+  "title": "Auto Clicker by Max MacroProfile (recovered serialized shape)",
+  "type": "object",
+  "properties": {
+    "Name": {"type": "string"},
+    "IsCombine": {"type": "boolean"},
+    "LoopCount": {"type": "integer"},
+    "RandomIntervalMs": {"type": "integer", "minimum": 0},
+    "RandomJitterPx": {"type": "integer", "minimum": 0},
+    "DefaultWindowTitle": {"type": "string"},
+    "DefaultProcessName": {"type": "string"},
+    "DefaultRelativeToWindow": {"type": "boolean"},
+    "Steps": {"type": "array", "items": {"$ref": "#/$defs/step"}}
+  },
+  "required": ["Name", "Steps"],
+  "additionalProperties": true,
+  "$defs": {
+    "step": {
+      "type": "object",
+      "properties": {
+        "Id": {"type": "string"}, "Name": {"type": "string"},
+        "ActionType": {"type": "integer", "minimum": 0, "maximum": 12},
+        "Enabled": {"type": "boolean"}, "IsChecked": {"type": "boolean"},
+        "StartX": {"type": "integer"}, "StartY": {"type": "integer"},
+        "EndX": {"type": "integer"}, "EndY": {"type": "integer"},
+        "HoldMs": {"type": "integer", "minimum": 0},
+        "DelayMs": {"type": "integer", "minimum": 0},
+        "RepeatCount": {"type": "integer"}, "ScrollStep": {"type": "integer"},
+        "KeyData": {"type": "string"}, "Note": {"type": "string"},
+        "ColorHex": {"type": "string"}, "Tolerance": {"type": "integer", "minimum": 0},
+        "IfTrueStep": {"type": "integer"}, "IfFalseStep": {"type": "integer"},
+        "WindowTitle": {"type": "string"}, "ProcessName": {"type": "string"},
+        "RelativeToWindow": {"type": "boolean"}
+      },
+      "required": ["ActionType"],
+      "additionalProperties": true
+    }
+  }
+}

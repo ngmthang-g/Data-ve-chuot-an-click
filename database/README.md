@@ -1,10 +1,10 @@
-# Database layer
+# Database usage
 
-Machine-friendly lookup layer for the frozen sample.
+- `FACTS.jsonl`: atomic high-value facts with evidence path.
+- `TYPE_INDEX.tsv`: all managed TypeDefs.
+- `METHOD_INDEX.tsv`: all 1,333 managed MethodDefs + tokens/RVAs.
+- `PINVOKE_MAP.tsv`: Win32 surface.
+- `CONSTANTS.tsv`: action enum + message/input constants.
+- `METADATA.json`: full parsed metadata snapshot produced by `tools/parse_dotnet.py`; the exact large snapshot is preserved inside `raw/full-dump/base64-parts/`.
 
-- `FACTS.jsonl`: atomic technical facts with evidence pointers.
-- `CONSTANTS.tsv`: action IDs, Win32 messages and flags.
-- `PINVOKE_MAP.tsv`: imported native API -> observed managed use.
-- `TYPE_INDEX.tsv`: important CLR type inventory.
-
-The complete local research bundle additionally contains the 1,333-method index, complete metadata JSON, full static call graph (12,257 edges), full IL dump and strings. Those bulk files are intentionally separated from normal AI routing so ordinary tasks do not preload megabytes of raw evidence.
+For a specific method, locate its token in METHOD_INDEX. High-value class IL is browsable under `reconstructed/evidence/`; the complete split IL is preserved in the reconstructable full-dump archive under `raw/full-dump/base64-parts/`.

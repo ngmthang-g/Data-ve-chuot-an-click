@@ -1,0 +1,15 @@
+# Exact IL provenance excerpt — Advanced.MacroRunner
+# Complete method/closure IL is preserved in full-static archive.
+0x0600001A RVA 0x3830 Start
+0x0600001B RVA 0x3A5C ExecuteStepList
+0x0600001C RVA 0x3ABC ExecuteSingleStep
+0x0600001D RVA 0x41E4 Stop
+0x060004DE RVA 0x3690 compiler-generated MacroRunner worker closure
+
+Recovered control-flow facts used by the reconstruction:
+- worker starts a background Thread named MacroRunnerThread and sleeps 60 ms before loop.
+- WaitColor polls at 20 ms until target color matches tolerance.
+- WaitChange samples initial color and polls at 20 ms until difference exceeds tolerance.
+- IfColor/IfColorArea use IfTrueStep/IfFalseStep; -1 stops; -2 on matched path synthesizes a left-click then continues; positive values are 1-based jump targets.
+- ordinary actions call ActionExecutor.Execute(step, freeMouse, randomInterval, randomJitter).
+- Stop clears volatile running flag and makes a bounded Join attempt.

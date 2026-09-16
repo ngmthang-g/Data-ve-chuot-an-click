@@ -1,0 +1,118 @@
+rid	namespace	name	method_start	method_end	field_start	field_end
+1		<Module>	1	0	1	0
+2	ModernAutoClicker	KeyboardSimulator	1	5	1	0
+3	ModernAutoClicker.Advanced	ActionExecutor	6	17	1	1
+4	ModernAutoClicker.Advanced	MacroRunner	18	32	2	8
+5	ModernAutoClicker.Advanced	MacroDescriptions	33	39	9	8
+6	ModernAutoClicker.Advanced	RowToolTipManager	40	42	9	9
+7	ModernAutoClicker.Advanced	MacroActionType	43	42	10	23
+8	ModernAutoClicker.Advanced	MacroProfile	43	62	24	32
+9	ModernAutoClicker.Advanced	MacroStep	63	106	33	52
+10	ModernAutoClicker.Advanced	MacroProject	107	111	53	54
+11	ModernAutoClicker.Advanced	MacroStorage	112	124	55	54
+12	ModernAutoClicker	RoundedPanel	125	134	55	57
+13	ModernAutoClicker.Advanced	AdvancedHotkeyCard	135	139	58	65
+14	ModernAutoClicker.Advanced	AdvancedTabPanel	140	196	66	90
+15	ModernAutoClicker.Advanced	MacroRowControl	197	279	91	127
+16	ModernAutoClicker.Advanced	MacroTableControl	280	366	128	146
+17	ModernAutoClicker.Advanced	BatchNumberInputDialog	367	372	147	150
+18	ModernAutoClicker.Advanced	BatchTextInputDialog	373	378	151	154
+19	ModernAutoClicker.Advanced	ModernColorDialog	379	391	155	164
+20	ModernAutoClicker.Advanced	ProfileTabItem	392	435	165	181
+21	ModernAutoClicker.Advanced	ProfileTabControl	436	471	182	193
+22	ModernAutoClicker.Advanced	VFX_AsianDragonOverdrive	472	485	194	209
+23		FlameEmber	486	485	210	219
+24	ModernAutoClicker.Info	SvgFileRenderer	486	496	220	225
+25	ModernAutoClicker.Info	InfoTabPanel	497	504	226	242
+26	ModernAutoClicker	ClickConfig	505	527	243	253
+27	ModernAutoClicker	ClickEngine	528	541	254	261
+28	ModernAutoClicker.Simple	CursorModeGuideCard	542	543	262	268
+29	ModernAutoClicker	SimpleHotkeyCard	544	547	269	274
+30	ModernAutoClicker	PointListControl	548	583	275	286
+31	ModernAutoClicker	PointRowControl	584	613	287	300
+32	ModernAutoClicker	AppLogo	614	617	301	301
+33	ModernAutoClicker	BuiltInTemplates	618	618	302	301
+34	ModernAutoClicker	DragDropReorderHelper	619	621	302	301
+35	ModernAutoClicker	PointRowDragFilter	622	623	302	309
+36	ModernAutoClicker	MacroRowDragFilter	624	625	310	317
+37	ModernAutoClicker	TabDragMessageFilter	626	627	318	325
+38	ModernAutoClicker	IconCache	628	637	326	328
+39	ModernAutoClicker	NativeMethods	638	692	329	362
+40		POINT	693	692	363	364
+41		MOUSEINPUT	693	692	365	370
+42		KEYBDINPUT	693	692	371	375
+43		InputUnion	693	692	376	377
+44		INPUT	693	692	378	379
+45		EnumWindowsProc	693	696	380	379
+46		RECT	697	696	380	383
+47		WindowTargetInfo	697	710	384	389
+48		TargetWindowCacheEntry	711	711	390	391
+49	ModernAutoClicker	MouseMovementSimulator	712	712	392	391
+50	ModernAutoClicker	CoordinatePicker	713	732	392	401
+51	ModernAutoClicker	OverlayForm	733	770	402	433
+52	ModernAutoClicker	StepPointSnapshot	771	777	434	436
+53	ModernAutoClicker	MapTransformToolWindow	778	797	437	461
+54	ModernAutoClicker	WindowTracker	798	827	462	474
+55	ModernAutoClicker	MainForm	828	948	475	554
+56	ModernAutoClicker	UnfocusClickFilter	949	952	555	555
+57	ModernAutoClicker	Program	953	960	556	559
+58	ModernAutoClicker	SimpleProfileConfig	961	982	560	569
+59	ModernAutoClicker	AppSettings	983	1030	570	579
+60	ModernAutoClicker	FileManager	1031	1034	580	579
+61	ModernAutoClicker	DoubleBufferedTableLayoutPanel	1035	1035	580	579
+62	ModernAutoClicker	RoundedButton	1036	1057	580	589
+63	ModernAutoClicker	ModernTextBox	1058	1067	590	594
+64	ModernAutoClicker	NumberInput	1068	1083	595	599
+65	ModernAutoClicker	NoScrollComboBox	1084	1085	600	600
+66	ModernAutoClicker	ModernDropdown	1086	1110	601	612
+67	ModernAutoClicker	ModernDropdownButton	1111	1123	613	618
+68	ModernAutoClicker	CustomTitleBar	1124	1140	619	627
+69	ModernAutoClicker	ModernScrollBar	1141	1171	628	641
+70	ModernAutoClicker	ThemeTokens	1172	1231	642	666
+71	ModernAutoClicker	ModernMenuRenderer	1232	1234	667	667
+72	ModernAutoClicker	ModernMenuColorTable	1235	1244	668	668
+73		<PrivateImplementationDetails>{5EF5BF91-0198-4671-890B-62ABA3E05724}	1245	1244	669	675
+74		__StaticArrayInitTypeSize=6	1245	1244	676	675
+75		<>c__DisplayClass2	1245	1246	676	683
+76		<>c__DisplayClass1	1247	1248	684	685
+77		<>c__DisplayClass29	1249	1250	686	688
+78		<>c__DisplayClass2d	1251	1252	689	690
+79		<>c__DisplayClass16	1253	1255	691	693
+80		<>c__DisplayClass18	1256	1257	694	695
+81		<>c__DisplayClass1a	1258	1259	696	697
+82		<>c__DisplayClass1c	1260	1261	698	699
+83		<>c__DisplayClass1e	1262	1263	700	701
+84		<>c__DisplayClass27	1264	1267	702	704
+85		<>c__DisplayClass2b	1268	1269	705	706
+86		<>c__DisplayClass2d	1270	1271	707	708
+87		<>c__DisplayClass30	1272	1272	709	710
+88		<>c__DisplayClass32	1273	1274	711	712
+89		<>c__DisplayClass36	1275	1276	713	714
+90		<>c__DisplayClass49	1277	1278	715	716
+91		<>c__DisplayClass17	1279	1281	717	719
+92		<>c__DisplayClass1a	1282	1283	720	721
+93		__StaticArrayInitTypeSize=20	1284	1283	722	721
+94		__StaticArrayInitTypeSize=16	1284	1283	722	721
+95		__StaticArrayInitTypeSize=10	1284	1283	722	721
+96		<>c__DisplayClass1	1284	1285	722	723
+97		<>c__DisplayClass3	1286	1288	724	725
+98		<>c__DisplayClass4	1289	1290	726	728
+99		<>c__DisplayClassa	1291	1292	729	732
+100		__StaticArrayInitTypeSize=32	1293	1292	733	732
+101		<>c__DisplayClassd	1293	1294	733	734
+102		<>c__DisplayClass11	1295	1296	735	737
+103		<>c__DisplayClass23	1297	1301	738	739
+104		<>c__DisplayClass26	1302	1303	740	742
+105		<>c__DisplayClass29	1304	1305	743	744
+106		<>c__DisplayClass35	1306	1308	745	746
+107		<>c__DisplayClass37	1309	1310	747	748
+108		<>c__DisplayClass3c	1311	1312	749	750
+109		<>c__DisplayClass4d	1313	1314	751	752
+110		<>c__DisplayClass50	1315	1316	753	755
+111		<>c__DisplayClass53	1317	1318	756	759
+112		<>c__DisplayClass56	1319	1320	760	763
+113		<>c__DisplayClass69	1321	1325	764	765
+114		<>c__DisplayClass6c	1326	1327	766	768
+115		<>c__DisplayClass6f	1328	1329	769	771
+116		<>c__DisplayClassae	1330	1331	772	773
+117		<>c__DisplayClass2	1332	1333	774	775

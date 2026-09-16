@@ -1,0 +1,141 @@
+=== 0x060002c8 ModernAutoClicker.MouseMovementSimulator::MoveSmoothly RVA=0x1b084 ===
+IL_0000: ldarg.3
+IL_0001: brfalse.s 12
+IL_0003: ldarg.3
+IL_0004: callvirt T27#30::Invoke
+IL_0009: brtrue.s 12
+IL_000b: ret
+IL_000c: ldarg.0
+IL_000d: ldsfld System.Drawing.Point::Empty
+IL_0012: call System.Drawing.Point::op_Equality
+IL_0017: brfalse.s 60
+IL_0019: ldloca.s 0
+IL_001b: call ModernAutoClicker.NativeMethods::GetCursorPos
+IL_0020: brfalse.s 57
+IL_0022: ldarga.s 0
+IL_0024: ldloca.s 0
+IL_0026: ldfld POINT::X
+IL_002b: ldloca.s 0
+IL_002d: ldfld POINT::Y
+IL_0032: call System.Drawing.Point::.ctor
+IL_0037: br.s 60
+IL_0039: ldarg.1
+IL_003a: starg.s 0
+IL_003c: ldarg.1
+IL_003d: ldsfld System.Drawing.Point::Empty
+IL_0042: call System.Drawing.Point::op_Equality
+IL_0047: brfalse.s 84
+IL_0049: ldarg.2
+IL_004a: ldc.i4.0
+IL_004b: ble.s 83
+IL_004d: ldarg.2
+IL_004e: call System.Threading.Thread::Sleep
+IL_0053: ret
+IL_0054: ldarg.2
+IL_0055: ldc.i4.s 20
+IL_0057: ble.s 121
+IL_0059: ldarga.s 0
+IL_005b: call System.Drawing.Point::get_X
+IL_0060: ldarga.s 1
+IL_0062: call System.Drawing.Point::get_X
+IL_0067: bne.un.s 152
+IL_0069: ldarga.s 0
+IL_006b: call System.Drawing.Point::get_Y
+IL_0070: ldarga.s 1
+IL_0072: call System.Drawing.Point::get_Y
+IL_0077: bne.un.s 152
+IL_0079: ldarga.s 1
+IL_007b: call System.Drawing.Point::get_X
+IL_0080: ldarga.s 1
+IL_0082: call System.Drawing.Point::get_Y
+IL_0087: call ModernAutoClicker.NativeMethods::SetCursorPos
+IL_008c: pop
+IL_008d: ldarg.2
+IL_008e: ldc.i4.0
+IL_008f: ble.s 151
+IL_0091: ldarg.2
+IL_0092: call System.Threading.Thread::Sleep
+IL_0097: ret
+IL_0098: call System.Diagnostics.Stopwatch::StartNew
+IL_009d: stloc.1
+IL_009e: br 297
+IL_00a3: ldarg.3
+IL_00a4: brfalse.s 177
+IL_00a6: ldarg.3
+IL_00a7: callvirt T27#30::Invoke
+IL_00ac: brfalse 310
+IL_00b1: ldloc.1
+IL_00b2: callvirt System.Diagnostics.Stopwatch::get_ElapsedMilliseconds
+IL_00b7: conv.r4
+IL_00b8: ldarg.2
+IL_00b9: conv.r4
+IL_00ba: div
+IL_00bb: stloc.2
+IL_00bc: ldloc.2
+IL_00bd: ldc.r4 1.0
+IL_00c2: ble.un.s 202
+IL_00c4: ldc.r4 1.0
+IL_00c9: stloc.2
+IL_00ca: ldloc.2
+IL_00cb: ldloc.2
+IL_00cc: mul
+IL_00cd: ldc.r4 3.0
+IL_00d2: ldc.r4 2.0
+IL_00d7: ldloc.2
+IL_00d8: mul
+IL_00d9: sub
+IL_00da: mul
+IL_00db: stloc.3
+IL_00dc: ldarga.s 0
+IL_00de: call System.Drawing.Point::get_X
+IL_00e3: conv.r4
+IL_00e4: ldarga.s 1
+IL_00e6: call System.Drawing.Point::get_X
+IL_00eb: ldarga.s 0
+IL_00ed: call System.Drawing.Point::get_X
+IL_00f2: sub
+IL_00f3: conv.r4
+IL_00f4: ldloc.3
+IL_00f5: mul
+IL_00f6: add
+IL_00f7: conv.i4
+IL_00f8: stloc.s 4
+IL_00fa: ldarga.s 0
+IL_00fc: call System.Drawing.Point::get_Y
+IL_0101: conv.r4
+IL_0102: ldarga.s 1
+IL_0104: call System.Drawing.Point::get_Y
+IL_0109: ldarga.s 0
+IL_010b: call System.Drawing.Point::get_Y
+IL_0110: sub
+IL_0111: conv.r4
+IL_0112: ldloc.3
+IL_0113: mul
+IL_0114: add
+IL_0115: conv.i4
+IL_0116: stloc.s 5
+IL_0118: ldloc.s 4
+IL_011a: ldloc.s 5
+IL_011c: call ModernAutoClicker.NativeMethods::SetCursorPos
+IL_0121: pop
+IL_0122: ldc.i4.s 10
+IL_0124: call System.Threading.Thread::Sleep
+IL_0129: ldloc.1
+IL_012a: callvirt System.Diagnostics.Stopwatch::get_ElapsedMilliseconds
+IL_012f: ldarg.2
+IL_0130: conv.i8
+IL_0131: blt 163
+IL_0136: ldloc.1
+IL_0137: callvirt System.Diagnostics.Stopwatch::Stop
+IL_013c: ldarg.3
+IL_013d: brfalse.s 327
+IL_013f: ldarg.3
+IL_0140: callvirt T27#30::Invoke
+IL_0145: brfalse.s 347
+IL_0147: ldarga.s 1
+IL_0149: call System.Drawing.Point::get_X
+IL_014e: ldarga.s 1
+IL_0150: call System.Drawing.Point::get_Y
+IL_0155: call ModernAutoClicker.NativeMethods::SetCursorPos
+IL_015a: pop
+IL_015b: ret

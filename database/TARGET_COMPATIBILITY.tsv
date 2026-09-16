@@ -1,0 +1,4 @@
+test_id	target_class	foreground	covered	minimized_resolver	background_click	child_hwnd	status	evidence
+TARGET-WINFORMS	WinForms	UNKNOWN	UNKNOWN	REJECTED_BY_RESOLVER_STATIC	UNKNOWN	UNKNOWN	PENDING	runtime log required
+TARGET-WPF	WPF	UNKNOWN	UNKNOWN	REJECTED_BY_RESOLVER_STATIC	UNKNOWN	UNKNOWN	PENDING	runtime log required
+TARGET-UNITY	Unity/DirectX	UNKNOWN	UNKNOWN	REJECTED_BY_RESOLVER_STATIC	UNKNOWN	UNKNOWN	PENDING	runtime log required

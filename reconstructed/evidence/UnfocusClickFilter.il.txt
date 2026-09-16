@@ -1,0 +1,116 @@
+=== 0x060003b5 ModernAutoClicker.UnfocusClickFilter::.ctor RVA=0x2689e ===
+IL_0000: ldarg.0
+IL_0001: call System.Object::.ctor
+IL_0006: ldarg.0
+IL_0007: ldarg.1
+IL_0008: stfld ModernAutoClicker.UnfocusClickFilter::_form
+IL_000d: ret
+
+=== 0x060003b6 ModernAutoClicker.UnfocusClickFilter::PreFilterMessage RVA=0x268b0 ===
+IL_0000: ldarg.1
+IL_0001: call System.Windows.Forms.Message::get_Msg
+IL_0006: ldc.i4 513
+IL_000b: beq.s 42
+IL_000d: ldarg.1
+IL_000e: call System.Windows.Forms.Message::get_Msg
+IL_0013: ldc.i4 516
+IL_0018: beq.s 42
+IL_001a: ldarg.1
+IL_001b: call System.Windows.Forms.Message::get_Msg
+IL_0020: ldc.i4 161
+IL_0025: bne.un 183
+IL_002a: ldarg.0
+IL_002b: ldfld ModernAutoClicker.UnfocusClickFilter::_form
+IL_0030: brfalse 183
+IL_0035: ldarg.0
+IL_0036: ldfld ModernAutoClicker.UnfocusClickFilter::_form
+IL_003b: callvirt System.Windows.Forms.Control::get_IsDisposed
+IL_0040: brtrue.s 183
+IL_0042: ldarg.0
+IL_0043: ldfld ModernAutoClicker.UnfocusClickFilter::_form
+IL_0048: callvirt System.Windows.Forms.Control::get_IsHandleCreated
+IL_004d: brfalse.s 183
+IL_004f: ldarg.0
+IL_0050: ldfld ModernAutoClicker.UnfocusClickFilter::_form
+IL_0055: call ModernAutoClicker.UnfocusClickFilter::GetDeepActiveControl
+IL_005a: stloc.0
+IL_005b: ldloc.0
+IL_005c: isinst System.Windows.Forms.TextBox
+IL_0061: brtrue.s 107
+IL_0063: ldloc.0
+IL_0064: isinst ModernAutoClicker.NumberInput
+IL_0069: brfalse.s 183
+IL_006b: ldarg.1
+IL_006c: call System.Windows.Forms.Message::get_HWnd
+IL_0071: call System.Windows.Forms.Control::FromHandle
+IL_0076: stloc.1
+IL_0077: ldloc.1
+IL_0078: brfalse.s 135
+IL_007a: ldloc.1
+IL_007b: ldloc.0
+IL_007c: beq.s 183
+IL_007e: ldloc.1
+IL_007f: ldloc.0
+IL_0080: call ModernAutoClicker.UnfocusClickFilter::IsChildOf
+IL_0085: brtrue.s 183
+IL_0087: ldloc.1
+IL_0088: brfalse.s 171
+IL_008a: ldloc.1
+IL_008b: callvirt System.Windows.Forms.Control::get_CanFocus
+IL_0090: brfalse.s 171
+IL_0092: ldloc.1
+IL_0093: isinst System.Windows.Forms.Panel
+IL_0098: brtrue.s 171
+IL_009a: ldloc.1
+IL_009b: isinst System.Windows.Forms.Label
+IL_00a0: brtrue.s 171
+IL_00a2: ldloc.1
+IL_00a3: callvirt System.Windows.Forms.Control::Focus
+IL_00a8: pop
+IL_00a9: br.s 183
+IL_00ab: ldarg.0
+IL_00ac: ldfld ModernAutoClicker.UnfocusClickFilter::_form
+IL_00b1: ldnull
+IL_00b2: callvirt System.Windows.Forms.ContainerControl::set_ActiveControl
+IL_00b7: ldc.i4.0
+IL_00b8: ret
+
+=== 0x060003b7 ModernAutoClicker.UnfocusClickFilter::GetDeepActiveControl RVA=0x26978 ===
+IL_0000: ldarg.0
+IL_0001: brtrue.s 5
+IL_0003: ldnull
+IL_0004: ret
+IL_0005: ldarg.0
+IL_0006: callvirt System.Windows.Forms.ContainerControl::get_ActiveControl
+IL_000b: stloc.0
+IL_000c: br.s 31
+IL_000e: ldloc.0
+IL_000f: castclass System.Windows.Forms.ContainerControl
+IL_0014: callvirt System.Windows.Forms.ContainerControl::get_ActiveControl
+IL_0019: stloc.1
+IL_001a: ldloc.1
+IL_001b: brfalse.s 39
+IL_001d: ldloc.1
+IL_001e: stloc.0
+IL_001f: ldloc.0
+IL_0020: isinst System.Windows.Forms.ContainerControl
+IL_0025: brtrue.s 14
+IL_0027: ldloc.0
+IL_0028: ret
+
+=== 0x060003b8 ModernAutoClicker.UnfocusClickFilter::IsChildOf RVA=0x269b0 ===
+IL_0000: ldarg.0
+IL_0001: stloc.0
+IL_0002: br.s 17
+IL_0004: ldloc.0
+IL_0005: ldarg.1
+IL_0006: bne.un.s 10
+IL_0008: ldc.i4.1
+IL_0009: ret
+IL_000a: ldloc.0
+IL_000b: callvirt System.Windows.Forms.Control::get_Parent
+IL_0010: stloc.0
+IL_0011: ldloc.0
+IL_0012: brtrue.s 4
+IL_0014: ldc.i4.0
+IL_0015: ret

@@ -1,0 +1,13 @@
+# Exact IL provenance excerpt — NativeMethods
+# Complete method bodies are in raw/full-dump/base64-parts/ -> raw/il/FULL_IL_PART_*.txt.
+0x06000298 RVA 0x1A3DC ModernAutoClicker.NativeMethods::GetTopLevelWindow
+0x0600029D RVA 0x1A414 ModernAutoClicker.NativeMethods::SendPhysicalClick
+0x0600029E RVA 0x1A4C8 ModernAutoClicker.NativeMethods::SendBackgroundClick
+0x0600029F RVA 0x1A5EC ModernAutoClicker.NativeMethods::PerformClickDirectToWindow
+0x060002B3 RVA 0x1ACC0 ModernAutoClicker.NativeMethods::FindWindowByTarget
+
+Key exact call evidence recovered from the full IL:
+SendBackgroundClick -> WindowFromPoint -> ScreenToClient -> RealChildWindowFromPoint -> PostMessage(WM_MOUSEMOVE) -> PostMessage(DOWN) -> Thread.Sleep(hold) -> PostMessage(UP)
+PerformClickDirectToWindow -> RealChildWindowFromPoint -> ClientToScreen -> ScreenToClient -> PostMessage(WM_MOUSEMOVE/DOWN/UP)
+SendPhysicalClick -> SendInput(DOWN) -> Thread.Sleep(hold) -> SendInput(UP)
+FindWindowByTarget -> IsWindow/IsWindowVisible/IsIconic + EnumWindows + GetWindowThreadProcessId

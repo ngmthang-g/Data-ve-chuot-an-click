@@ -1,0 +1,9 @@
+# Exact IL provenance excerpt — WindowTracker
+0x06000333 RVA 0x1F9D0 Start
+0x06000334 RVA 0x1F9DD Stop
+0x06000338 RVA 0x1FA0C CheckNow
+0x06000339 RVA 0x1FA54 Timer_Tick
+0x0600033A RVA 0x1FAC8 GetSignature
+0x0600033B RVA 0x1FD20 Dispose
+
+GetSignature IL derives a signature from live HWND + client origin converted by ClientToScreen, deduplicating advanced step targets by process|title. Timer_Tick suppresses tracking while paused/hidden/inactive/running/overlay-interacting. Complete IL is in full-static archive.

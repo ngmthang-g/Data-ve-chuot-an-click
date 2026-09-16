@@ -1,0 +1,18 @@
+# Exact IL provenance excerpt — Advanced.ActionExecutor
+# Complete IL is preserved in the full-static archive.
+0x06000007 RVA 0x29C4 ApplyJitter
+0x06000008 ApplyHoldInterval
+0x06000009 ApplyDelayInterval
+0x0600000A RVA 0x2A90 MatchesColor
+0x0600000B RVA 0x2AF0 FindMatchingPixelInArea
+0x0600000C RVA 0x2D74 ResolveActualScreenPoint
+0x0600000D RVA 0x2E18 Execute
+0x0600000E RVA 0x2FF8 PerformClickDirectToWindow
+0x0600000F RVA 0x30B8 PerformClick
+0x06000010 RVA 0x3290 PerformMiddleScroll
+0x06000011 RVA 0x3450 PerformDrag
+
+Exact transport distinction from IL:
+- 0x0600000E posts WM_MOUSEMOVE + button DOWN/UP directly to supplied HWND and does not call RealChildWindowFromPoint.
+- 0x0600000F free-mouse branch calls WindowFromPoint + ScreenToClient and posts DOWN/UP; no WM_MOUSEMOVE and no RealChildWindowFromPoint in that block.
+- Execute signature has 4 args: MacroStep, bool freeMouseMode, int randomInterval, int randomJitter.

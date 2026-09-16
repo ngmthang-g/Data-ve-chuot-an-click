@@ -1,0 +1,5 @@
+# Exact IL provenance excerpt — Advanced.MacroStorage
+# Complete serializer/parser IL is preserved in full-static archive.
+MethodDefs 0x06000070..0x0600007C cover ToJson, ProjectToJson, SaveToFile, SaveProjectToFile, FromJson, ProjectFromJson, LoadFromFile, LoadProjectFromFile and JSON helper/parser routines.
+0x0600007C RVA 0x6028 includes object-array splitting logic that tracks brace depth, quoted-string state and escapes.
+Recovered serialized fields are formalized in database/ACTION_SCHEMA.json and analysis/13_CONFIG_AND_ACTION_SCHEMA.md.

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MouseHiddenClick runtime probe result",
+  "type": "object",
+  "required": ["timestamp_utc", "test_id", "state_tag", "target", "resolved", "before", "after", "messages", "observed_result"],
+  "properties": {
+    "timestamp_utc": {"type": "string"},
+    "test_id": {"type": "string", "minLength": 1},
+    "state_tag": {"type": "string"},
+    "target": {
+      "type": "object",
+      "properties": {
+        "transport_variant": {"enum": ["NativeDirect", "NativeScreen", "AdvancedDirect", "AdvancedScreen"]},
+        "allow_iconic": {"type": "boolean"},
+        "process_name": {"type": ["string", "null"]},
+        "requested_pid": {"type": "integer"},
+        "title_contains": {"type": "string"},
+        "client_x": {"type": "integer"}, "client_y": {"type": "integer"},
+        "button": {"enum": ["Left", "Right", "Middle"]},
+        "hold_ms": {"type": "integer"}
+      },
+      "required": ["transport_variant", "button"]
+    },
+    "resolved": {"type": "object", "description": "On success contains HWND/coordinate/DPI data; on resolver failure contains status+error."},
+    "before": {"type": "object"},
+    "after": {"type": "object"},
+    "messages": {"type": "array", "minItems": 0},
+    "observed_result": {"enum": ["success", "no_effect", "partial", "unknown"]},
+    "notes": {"type": "string"}
+  }
+}

@@ -1,0 +1,9 @@
+# Exact IL provenance excerpt — CoordinatePicker
+0x060002D4 RVA 0x1B580 OnMouseMove
+0x060002D5 RVA 0x1B63C OnMouseDown
+0x060002D6 RVA 0x1B6B8 OnMouseUp
+0x060002D8 RVA 0x1B7B0 ConfirmPoint
+0x060002D9 RVA 0x1B958 ConfirmArea
+
+ConfirmPoint IL: screen point -> WindowFromPoint -> GetTopLevelWindow/GetAncestor(GA_ROOT) -> GetWindowThreadProcessId -> process/title -> ScreenToClient -> client-relative point.
+ConfirmArea similarly normalizes the area and records target-relative endpoints. Complete IL is in full-static archive.

@@ -1,0 +1,8 @@
+# Exact IL provenance excerpt — KeyboardSimulator
+0x06000001 RVA 0x2058 ExecuteKeyPress
+0x06000002 RVA 0x231C ExecuteTypeText
+0x06000003 RVA 0x24DC CreateKeyInput
+0x06000004 RVA 0x2588 IsExtendedKey
+0x06000005 RVA 0x25E8 ParseVirtualKeyCode
+
+IL shows keyboard actions are implemented with SendInput, including modifier down/up ordering and Unicode KEYEVENTF_UNICODE typing; they are not PostMessage background-key transports. Complete IL is in the full-static archive.

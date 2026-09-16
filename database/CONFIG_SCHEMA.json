@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/mouse-hidden-click/click-config.schema.json",
+  "title": "ModernAutoClicker.ClickConfig (metadata-derived)",
+  "type": "object",
+  "properties": {
+    "IntervalMs": {"type": "integer"}, "MouseButton": {"type": "integer"},
+    "ClickMode": {"type": "integer"}, "Loops": {"type": "integer"},
+    "JitterPx": {"type": "integer"}, "FreeMouseMode": {"type": "boolean"},
+    "SmoothMouseMove": {"type": "boolean"}, "TargetProcessName": {"type": "string"},
+    "TargetWindowTitle": {"type": "string"}, "RelativeToWindow": {"type": "boolean"},
+    "PointsList": {"type": "array", "items": {"type": "object", "properties": {"X": {"type": "integer"}, "Y": {"type": "integer"}}, "required": ["X", "Y"], "additionalProperties": false}}
+  },
+  "additionalProperties": false,
+  "description": "Property set recovered from CLR metadata. Constructor supplies no explicit defaults; UI/runtime policy may constrain values further."
+}

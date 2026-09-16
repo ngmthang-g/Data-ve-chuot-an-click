@@ -8,7 +8,7 @@ Repo này là canonical KB cho cơ chế Windows background click / “Free Mous
 2. Đọc `AI_INDEX.md` và `AI_ROUTER.md`.
 3. Ưu tiên `verified/` trước `analysis/`.
 4. Dùng `database/FACTS.jsonl` cho fact atomic; không đọc tuần tự mọi raw file.
-5. Chỉ xuống `raw/` khi cần chứng minh call-chain hoặc hằng số/message cụ thể.
+5. Chỉ xuống `raw/il/` khi cần chứng minh call-chain hoặc hằng số/message cụ thể.
 6. Nếu một build EXE khác có SHA-256 khác, tạo snapshot/manifest mới; không trộn fact giữa hai build.
 
 ## Evidence levels
@@ -20,3 +20,9 @@ Repo này là canonical KB cho cơ chế Windows background click / “Free Mous
 ## Canonical high-value fact
 
 `FreeMouseMode=true` chuyển `ClickEngine` sang `SendBackgroundClick` hoặc `PerformClickDirectToWindow`; hai đường này sử dụng `PostMessage` thay vì `SetCursorPos + SendInput` cho click.
+
+## Deep-research additions
+- Before treating all background clicks as equivalent, read `verified/VERIFIED_BACKGROUND_TRANSPORT_VARIANTS.md`.
+- Runtime claims require a matching log under `runtime/results/`; a PENDING matrix row is not runtime proof.
+- `reconstructed/` is readable donor reference source, never original author source. IL evidence remains authoritative.
+- Run `python tools/validate_kb.py --exe <sample.exe>` when the frozen EXE is available.

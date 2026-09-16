@@ -1,0 +1,10 @@
+# Exact IL provenance excerpt — ClickEngine
+0x06000210 get_IsRunning
+0x06000211 get_TotalClicks
+0x06000218 RVA 0x16960 ApplyJitter
+0x06000219 RVA 0x169AC ResolveActualPoint
+0x0600021A RVA 0x16FCC Start
+0x0600021B RVA 0x17044 Stop
+0x06000507 RVA 0x16A40 compiler-generated worker closure
+
+Worker IL reads ClickConfig.FreeMouseMode. FreeMouse=true selects PerformClickDirectToWindow for a resolved relative target, otherwise SendBackgroundClick. FreeMouse=false resolves/moves the cursor and calls SendPhysicalClick. Complete worker IL is in full-static archive.

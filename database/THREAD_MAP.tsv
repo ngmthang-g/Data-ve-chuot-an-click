@@ -1,0 +1,5 @@
+component	entry_token	worker_token	threading	cancellation	key_waits
+ClickEngine	0x0600021A	0x06000507	background Thread	volatile _isRunning + bounded Join	holdMs; remaining interval; smooth-move 10ms samples
+Advanced.MacroRunner	0x0600001A	0x060004DE	background Thread named MacroRunnerThread	volatile _isRunning + bounded Join	60ms startup; 20ms color/change polling; action delays
+WindowTracker	0x06000333	N/A	WinForms Timer/UI message loop	Stop/Pause flags	configured timer interval
+MouseMovementSimulator	0x060002C8	caller thread	no own thread	predicate callback	10ms interpolation samples

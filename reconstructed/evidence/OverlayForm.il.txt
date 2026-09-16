@@ -1,0 +1,9 @@
+# Exact IL provenance excerpt — OverlayForm
+0x060002EC RVA 0x1C5E4 get_ShowWithoutActivation
+0x060002ED RVA 0x1C5E8 get_CreateParams
+0x060002EE RVA 0x1C610 SetClickThrough
+0x060002EF RVA 0x1C668 WndProc
+0x060002F5 RVA 0x1CD54 ShowOverlay
+0x060002F6 RVA 0x1CD88 ClearAndHide
+
+IL shows ShowWithoutActivation=true, extended style composition including no-activate/topmost/toolwindow behavior, optional WS_EX_TRANSPARENT, WM_MOUSEACTIVATE -> MA_NOACTIVATE, and WM_NCHITTEST -> HTTRANSPARENT outside interactive markers. Complete painting/hit-test IL is in full-static archive.
